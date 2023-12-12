@@ -32,7 +32,7 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         blank=True
     )
-    image = models.ImageField(upload_to='blog/images/', null=True, blank=True)
+    image = models.ImageField(upload_to='static/img/', null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)

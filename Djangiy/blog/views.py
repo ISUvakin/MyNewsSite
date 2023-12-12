@@ -1,8 +1,7 @@
 from .form import EmailPostForm
 from .models import Post
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
-
 
 # Create your views here.
 

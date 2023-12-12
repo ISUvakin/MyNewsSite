@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <h1>Home page</h1>
@@ -7,8 +8,12 @@
     <a href="{% url 'logout' %}">Logout</a>
      {% for el in posts %}
         <div class="alert alert-warning mt-2">
-            <href <h3>{{ el.title }}</h3>
-            <img src="{{ el.image.url }}">
+            <h3>{{ el.title }}</h3>
+            <h3>{{ el.category }}</h3>
+            <img src="{{ el.image }}" alt="пикча не грузится">
+            <img src="{% static 'img/example.png' %}" alt="экземпляр не грузится">
+            <img src="{{ el.image.url}}" alt="connect" style="max-height:300px">
+            <h3>{{ el.body }}</h3>
         </div>
     {% endfor%}
 {% else %}
